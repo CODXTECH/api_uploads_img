@@ -18,7 +18,7 @@ async function bootstrap() {
 
     app.useGlobalFilters(new AllExceptionsFilter());        // <-- CAPTURA ERRORES GLOBALES
 
-    await app.listen(process.env.PORT ?? 3002);
+    await app.listen(process.env.PORT ?? 3002, '0.0.0.0');
     console.log(`Application is running on: ${await app.getUrl()}`);
 }
 bootstrap();
